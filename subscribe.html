@@ -263,7 +263,6 @@
 
       if (document.getElementById("card-element")) {
         let elements = stripe.elements();
-        alert("hi")
         // Card Element styles
         let style = {
           base: {
@@ -297,44 +296,20 @@
         });
       }
 
-      let signupForm = document.getElementById("signup-form");
-      if (signupForm) {
-        signupForm.addEventListener("submit", function (evt) {
+      // @important This is the most important part here.
+      // At card form submission, we create the customer, then use the customer id to create the
+      // payment method and the subscription.
+
+      let subscriptionForm = document.getElementById("subscription-form");
+      if (subscriptionForm) {
+        subscriptionForm.addEventListener("submit", function (evt) {
           evt.preventDefault();
-          changeLoadingState(true);
+
           // Create customer
-          createCustomer().then((result) => {
-            customer = result.customer;
-
-            window.location.href = "/prices.html?customerId=" + customer.id;
+          createCustomer().then((response) => {
+            customer = response.customer;
+            createPaymentMethod({ card: card, customerId: customer.Id });
           });
-        });
-      }
-
-      let paymentForm = document.getElementById("payment-form");
-      if (paymentForm) {
-        paymentForm.addEventListener("submit", function (evt) {
-          evt.preventDefault();
-          changeLoadingStatePrices(true);
-
-          // If a previous payment was attempted, get the lastest invoice
-          const latestInvoicePaymentIntentStatus = localStorage.getItem(
-            "latestInvoicePaymentIntentStatus"
-          );
-
-          if (latestInvoicePaymentIntentStatus === "requires_payment_method") {
-            const invoiceId = localStorage.getItem("latestInvoiceId");
-            const isPaymentRetry = true;
-            // create new payment method & retry payment on invoice with new payment method
-            createPaymentMethod({
-              card,
-              isPaymentRetry,
-              invoiceId,
-            });
-          } else {
-            // create new payment method & create subscription
-            createPaymentMethod({ card });
-          }
         });
       }
     }
@@ -349,9 +324,12 @@
       }
     }
 
-    function createPaymentMethod({ card, isPaymentRetry, invoiceId }) {
-      const params = new URLSearchParams(document.location.search.substring(1));
-      const customerId = params.get("customerId");
+    function createPaymentMethod({
+      card,
+      isPaymentRetry,
+      invoiceId,
+      customerId,
+    }) {
       // Set up payment method for recurring usage
       let billingName = document.querySelector("#name").value;
 
@@ -488,7 +466,7 @@
     }
 
     function createCustomer() {
-      let billingEmail = document.querySelector("#email").value;
+      let billingEmail = "test@gmail.com";
 
       return fetch("/create-customer", {
         method: "post",
@@ -800,7 +778,7 @@
           stripeElements(response.publishableKey);
         });
     }
-    
+
     stripeElements("pk_test_3GOAJCc3uv8T7CS7tqN3gi4t");
     //getConfig();
 
