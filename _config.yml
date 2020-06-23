@@ -34,5 +34,5 @@ output: web
 topnav_title: Micro
 site_title: Micro
 # recommend to use this fixed url in codes and here ,but we can change to any CNAME ,better in CNAME file
-baseurl: "https://micro.github.io/website"
+# baseurl: "https://micro.github.io/website"
 exclude: [main.go]
