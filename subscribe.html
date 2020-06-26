@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="About Micro" />
-    <title>Micro - About</title>
+    <title>Micro - Subscribe</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -36,6 +36,23 @@
               padding: 20px 10% 20px 10%;
               background-color: #f5f5f5;
               list-style: none;
+            }
+
+            button {
+              background-color: #85D4D8; /* Green */
+              border: none;
+              color: black;
+              padding: 15px 32px;
+              cursor: pointer;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              border-radius: 5px;
+            }
+
+            button:hover {
+              background-color: rgb(152, 230, 235);
             }
 
         /* Stripe Elements CSS */
@@ -143,37 +160,22 @@
                 <div class="panel panel-success">
                   <div class="panel-body" style="text-align: center;">
                     <div class="the-price">
-                      <h1>$35<span class="subscript">/mo</span></h1>
+                      <h1>$35<span class="subscript">/month</span></h1>
                     </div>
                     <table class="table">
                       <tr>
                         <td>
-                          2 Accounts
+                          No infra to manage
                         </td>
                       </tr>
                       <tr class="active">
                         <td>
-                          5 Project
+                          Same CLI experience as local
                         </td>
                       </tr>
                       <tr>
                         <td>
-                          100K API Access
-                        </td>
-                      </tr>
-                      <tr class="active">
-                        <td>
-                          200MB Storage
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Custom Cloud Services
-                        </td>
-                      </tr>
-                      <tr class="active">
-                        <td>
-                          Weekly Reports
+                          Free database for your services
                         </td>
                       </tr>
                     </table>
@@ -181,8 +183,9 @@
                 </div>
               </div>
             </div>
-            <div class="row">
-              <div class="col-xs-12 col-md-6">
+            <div class="row" style="padding-top: 2em;">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
                 <form id="subscription-form">
                   <div id="card-element" class="MyCardElement">
                     <!-- Elements will create input elements here -->
@@ -190,17 +193,53 @@
 
                   <!-- We'll put the error messages in this element -->
                   <div id="card-errors" role="alert"></div>
-                  <button type="submit">Subscribe</button>
+                  <div style="text-align: center;">
+                    <button
+                      style="margin-top: 2em; margin-bottom: 2em;"
+                      type="submit"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
                 </form>
               </div>
             </div>
-            <p>
-              Micro is a globally distributed technology company on a mission to
-              simplify the way we build, share and collaborate on services in
-              the Cloud and beyond. We do this with a developer first focus.
-            </p>
-
-            <h4><b>Overview</b></h4>
+            <div
+              id="payment-method-id-display"
+              style="text-align: center; display: none;"
+            >
+              <div style="margin-bottom: 1em; font-size: 1.25em;">
+                Please copy and paste the following token when asked by the
+                `micro login` flow:
+              </div>
+              <div
+                id="payment-method-copypaste"
+                style="
+                  border-radius: 8px;
+                  padding: 1em;
+                  background: #66ff33;
+                  text-align: center;
+                  font-size: 2em;
+                "
+              >
+                example-token-jibcg2g22jd2d-2d2e3d
+              </div>
+            </div>
+            <div
+              id="payment-method-error"
+              style="text-align: center; display: none;"
+            >
+              <div
+                id="payment-method-error-text"
+                style="
+                  border-radius: 8px;
+                  padding: 1em;
+                  background: #ff9c7e;
+                  text-align: center;
+                  font-size: 2em;
+                "
+              ></div>
+            </div>
           </div>
         </div>
       </div>
@@ -283,12 +322,12 @@
 
         card.on("focus", function () {
           let el = document.getElementById("card-element-errors");
-          el.classList.add("focused");
+          //el.classList.add("focused");
         });
 
         card.on("blur", function () {
           let el = document.getElementById("card-element-errors");
-          el.classList.remove("focused");
+          //el.classList.remove("focused");
         });
 
         card.on("change", function (event) {
@@ -306,10 +345,11 @@
           evt.preventDefault();
 
           // Create customer
-          createCustomer().then((response) => {
-            customer = response.customer;
-            createPaymentMethod({ card: card, customerId: customer.Id });
-          });
+          //createCustomer().then((response) => {
+          //  customer = response.customer;
+          //  createPaymentMethod({ card: card, customerId: customer.Id });
+          // });
+          createPaymentMethod({ card: card });
         });
       }
     }
@@ -331,22 +371,34 @@
       customerId,
     }) {
       // Set up payment method for recurring usage
-      let billingName = document.querySelector("#name").value;
+      let billingName = document.querySelector("#name")
+        ? document.querySelector("#name").value
+        : "";
 
-      let priceId = document.getElementById("priceId").innerHTML.toUpperCase();
+      //let priceId = document.getElementById("priceId").innerHTML.toUpperCase();
 
       stripe
         .createPaymentMethod({
           type: "card",
           card: card,
-          billing_details: {
-            name: billingName,
-          },
+          //billing_details: {
+          //  name: billingName,
+          //},
         })
         .then((result) => {
+          // result.error = "whaat"
           if (result.error) {
-            displayError(result);
+            console.log("Failure");
+            $("#payment-method-error").show();
+            $("#payment-method-error-text").text(result.error.message);
           } else {
+            console.log("Success");
+            $("#payment-method-error").hide();
+            $("#payment-method-id-display").show();
+            $("#subscription-form").hide();
+            $("#payment-method-copypaste").text(result.paymentMethod.id);
+
+            return;
             if (isPaymentRetry) {
               // Update the payment method and retry invoice payment
               retryInvoiceWithNewPaymentMethod({
