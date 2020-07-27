@@ -42,6 +42,8 @@
         padding: 0.5em;
         background: #eee;
         border-radius: 0.5em;
+        font-weight: 300;
+        text-align: left;
       }
     </style>
   </head>
@@ -113,17 +115,22 @@
 
             <h4 class="command"><b>go install github.com/micro/micro</b></h4>
             <p>
-              Install the Micro CLI which will enable you to develop, deploy and debug locally and on the M3o platform.
+              Install the Micro CLI which will enable you to develop, deploy and debug locally and on the M3O platform.
             </p>
 
             <h4 class="command"><b>micro env set platform</b></h4>
             <p>
-	            This command makes the rest of your CLI commands go against the live M3o cluster.
+	            This command makes the rest of your CLI commands go against the live M3O cluster.
             </p>
 
             <h4 class="command"><b>micro signup</b></h4>
             <p>
-              Signup is required before you can use M3o.
+              Signup is required before you can use M3O.
+            </p>
+
+            <h4 class="command"><b>micro login</b></h4>
+            <p>
+              Login with the credentials provided during signup.
             </p>
 
             <h4 class="command"><b>micro run github.com/micro/services/helloworld</b></h4>
@@ -135,7 +142,6 @@
             <p>
               See if your services are running.
             </p>
-
 
             <h4 class="command"><b>micro logs -f helloworld</b></h4>
             <p>
@@ -152,6 +158,10 @@
             Deploy new changes
             </p>
 
+            <h4 class="command"><b>micro login</b></h4>
+            <p>
+              Log in with the credentials you provided during signup.
+            </p>
 
             For more information, please see <a href="https://m3o.dev/">https://m3o.dev</a>.
             <br />
