@@ -89,7 +89,7 @@
         background-color: #fefde5 !important;
     </style>
   </head>
-  <body>
+  <body onload="acceptParam()">
     <div class="container-fluid">
       <div class="row title">
         <div class="col-md-10 offset-md-1">
@@ -1039,6 +1039,19 @@
     function resetDemo() {
       clearCache();
       window.location.href = "/";
+    }
+
+    function acceptParam() {
+      var hashParams = window.location.href.split('?'); 
+          hashParams = hashParams[1].split('&');
+          hashParams.forEach(function(s) {
+            var p = s.split('=');
+            let elem = p[0]
+            let val = p[1]
+            if (document.getElementById(elem) !=null) {
+              document.getElementById(elem).value = val
+            }
+          })
     }
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
