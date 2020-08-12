@@ -730,7 +730,14 @@
         });
     }
 
-    stripeElements("pk_test_wuI8wlKwKBUZ9iHnYlQPa8BH");
+    const urlParams = new URLSearchParams(window.location.search);
+    const env = urlParams.get('env');
+    if (env == 'staging') {
+      stripeElements("pk_test_wuI8wlKwKBUZ9iHnYlQPa8BH");
+    } else {
+      stripeElements("pk_live_CPlU8hrgrZBGZIg1NZjdpx6p");
+    }
+    
     //getConfig();
 
     /* ------ Sample helpers ------- */
