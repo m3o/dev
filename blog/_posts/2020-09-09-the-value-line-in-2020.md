@@ -43,7 +43,7 @@ Let's take it a step further.
 
 Alice and Joe put out the MVP and start getting traction. They're onboarding friends and posting on social media to get some of 
 the initial users. The traction is good and they're starting to grow past a couple hundred users with line of sight to a thousand 
-in a few weeks. They're already feeling the pains of heroku but decide to double down, the phonegap is also slow so they're 
+in a few weeks. They're already feeling the pains of heroku but decide to double down, phonegap performance is also poor so they're 
 trying to find a solution.
 
 Alice decides they should scale the dynos on heroku, pay for more mysql storage and contract a developer for the app side. If the 
