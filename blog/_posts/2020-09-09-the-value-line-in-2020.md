@@ -27,11 +27,11 @@ Alice sets out to solve the problem with an MVP. Her and one other engineer (Joe
 something like this work. They'll need a mobile app, some sort of prepaid card and a way to manage all this on the backend.
 
 Alice knows how to build html5 apps and Joe is a pretty good full stack dev using ruby on rails plus they've seen that 
-Stripe issuing is a card issuer so they can potentially tap into that real quick. Alice and Joe decide to use Heroku 
+Stripe is a card issuer so they can potentially tap into that real quick. Alice and Joe decide to use Heroku 
 for hosting a rails app with a mysql backend and try get something off the ground using Phonegap. 
 
 Its a convoluted example but here Alice identified the problem was one she felt herself and needed to prototype for quickly. 
-Offloading much of the initial tech requirements to a fully managed PaaS, a card issue with an API and html to app converter.
+Offloading much of the initial tech requirements to a fully managed PaaS, a card issuer with an API and html to app converter.
 
 At every stage of your business you need to identify, what's the problem I'm solving and what tradeoffs am I making to solve that problem 
 vs finding a perfectly scalable solution for the future. Basically, what's the value I'm creating and how much operational 
