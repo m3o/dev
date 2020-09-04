@@ -131,4 +131,4 @@ those microservices yourself into a cohesive API, we do it for you.
 When you're thinking about the value line for your business. When deciding whether the future of your company is developing 
 software or managing the operations of it. Choose development every day of the week by letting us deal with the operations.
 
-If you're interested to learn more check out [m3o.com](https://m3o.com).
+If you're interested to learn more check out [m3o.com](https://m3o.com) or join us at [slack.m3o.com](https://slack.m3o.com).
