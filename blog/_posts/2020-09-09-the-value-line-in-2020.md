@@ -37,7 +37,7 @@ At every stage of your business you need to identify, what's the problem I'm sol
 vs finding a perfectly scalable solution for the future. Basically, what's the value I'm creating and how much operational 
 overhead do I need to incur.
 
-Let's take it a step further
+Let's take it a step further.
 
 ## Initial Traction
 
