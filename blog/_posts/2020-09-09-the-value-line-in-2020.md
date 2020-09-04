@@ -1,6 +1,5 @@
 ---
 layout:	post
-author: Asim Aslam
 title:	"The value line in 2020: Dev vs Ops"
 date:	2020-09-09 10:00:00
 ---
