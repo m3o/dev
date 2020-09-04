@@ -100,7 +100,7 @@ our current needs and assume that self managed is the most appropriate choice fo
 The customisation, the cost reduction on the managed service itself, all the possibilities. All without thinking about what the 
 operational cost and maintenance burden is. I'm here to tell you, this, is a pivotal moment in your company's lifetime. 
 
-Deciding where the value line is for your company is now will determine where you spend the majority of your time and money 
+Deciding where the value line is for your company now will determine where you spend the majority of your time and money 
 moving forward. Self managed is a sunk cost, a pit that becomes incredibly hard to climb back out of. As much as you may 
 believe you can transition off the in-house approach, we rarely see it happen.
 
