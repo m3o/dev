@@ -1,7 +1,7 @@
 ---
 layout:	post
 title:	"The value line in 2020: Dev vs Ops"
-date:	2020-09-09 10:00:00
+date:	2020-09-06 10:00:00
 ---
 <br>
 <i>Hat tip to my friend James Watters ([@wattersjames](https://twitter.com/wattersjames)) for teaching me about the value line.</i><br><br>
