@@ -1,5 +1,6 @@
 ---
 ---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,59 +22,59 @@
     <link rel="stylesheet" href="/assets/css/m.css?v=50" />
     <script src="https://js.stripe.com/v3/"></script>
     <style type="text/css">
-      h4 {
-        text-align: center;
-        margin: 30px 0 25px 0;
-      }
-      .sub-main {
-	margin-top: 20px;
-	min-height: 100vh;
-      }
-      #subscription-form {
-         max-width: 400px;
-         margin: 0 auto; 
-       }
-       #subscription-form input {
-          border: 0;
-          border-bottom: 1px solid #ced4da;
-          border-radius: 0;
-          margin-bottom: 10px;
-        }
-        .form-control:focus {
-          outline: none;
-          box-shadow: none;
-        }
-        /* Stripe Elements CSS */
-            /**
-       * The CSS shown here will not be introduced in the Quickstart guide, but shows
-       * how you can use CSS to style your Element's container.
-       */
-      .StripeElement {
-        box-sizing: border-box;
+           h4 {
+             text-align: center;
+             margin: 30px 0 25px 0;
+           }
+           .sub-main {
+      margin-top: 20px;
+      min-height: 100vh;
+           }
+           #subscription-form {
+              max-width: 400px;
+              margin: 0 auto;
+            }
+            #subscription-form input {
+               border: 0;
+               border-bottom: 1px solid #ced4da;
+               border-radius: 0;
+               margin-bottom: 10px;
+             }
+             .form-control:focus {
+               outline: none;
+               box-shadow: none;
+             }
+             /* Stripe Elements CSS */
+                 /**
+            * The CSS shown here will not be introduced in the Quickstart guide, but shows
+            * how you can use CSS to style your Element's container.
+            */
+           .StripeElement {
+             box-sizing: border-box;
 
-        height: 40px;
+             height: 40px;
 
-        padding: 10px 12px;
+             padding: 10px 12px;
 
-        border: 1px solid transparent;
-        border-radius: 4px;
-        background-color: white;
+             border: 1px solid transparent;
+             border-radius: 4px;
+             background-color: white;
 
-        box-shadow: 0 1px 3px 0 #e6ebf1;
-        -webkit-transition: box-shadow 150ms ease;
-        transition: box-shadow 150ms ease;
-      }
+             box-shadow: 0 1px 3px 0 #e6ebf1;
+             -webkit-transition: box-shadow 150ms ease;
+             transition: box-shadow 150ms ease;
+           }
 
-      .StripeElement--focus {
-        box-shadow: 0 1px 3px 0 #cfd7df;
-      }
+           .StripeElement--focus {
+             box-shadow: 0 1px 3px 0 #cfd7df;
+           }
 
-      .StripeElement--invalid {
-        border-color: #fa755a;
-      }
+           .StripeElement--invalid {
+             border-color: #fa755a;
+           }
 
-      .StripeElement--webkit-autofill {
-        background-color: #fefde5 !important;
+           .StripeElement--webkit-autofill {
+             background-color: #fefde5 !important;
     </style>
   </head>
   <body onload="acceptParam()">
@@ -83,75 +84,95 @@
         <div class="col-md-8 offset-md-2">
           <center>
             <h1><b>Subscribe to the M3O Platform</b></h1>
-	    <p>&nbsp;</p>
-	    <h3>M3O is a cloud native platform built for Micro services development</h3>
+            <p>&nbsp;</p>
+            <h3>
+              M3O is a cloud native platform built for Micro services
+              development
+            </h3>
           </center>
           <div>
             <div class="row">
-	      {% include features-dev.html %}
+              {% include features-dev.html %}
 
-              <div class="col-lg-6 border rounded" style="margin: 25px;">
-		<h4>Subscribe</h4>
-                <center><h5 class="text-muted">Enter your details to subscribe and get started.</h5></center>
-		<br>
+              <div class="col-lg-6 border rounded" style="margin: 25px">
+                <h4>Subscribe</h4>
+                <center>
+                  <h5 class="text-muted">
+                    Enter your details to subscribe and get started.
+                  </h5>
+                </center>
+                <br />
                 <form id="subscription-form">
-                  <input class="form-control" type="email" id="email" name="email" placeholder="Email address" autofocus required>
+                  <input
+                    class="form-control"
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Email address"
+                    autofocus
+                    required
+                  />
                   <div id="card-element" class="MyCardElement">
                     <!-- Elements will create input elements here -->
                   </div>
 
                   <!-- We'll put the error messages in this element -->
                   <div id="card-errors" role="alert"></div>
-                  <small class="form-text text-muted" style="margin-top: 2em; text-align: center;">By clicking subscribe you agree to our <a href="/terms" >terms of service</a>.</small>
-                  <div style="text-align: center;">
+                  <small
+                    class="form-text text-muted"
+                    style="margin-top: 2em; text-align: center"
+                    >By clicking subscribe you agree to our
+                    <a href="/terms">terms of service</a>.</small
+                  >
+                  <div style="text-align: center">
                     <button
-                      style="margin-top: 2em; margin-bottom: 2em;"
+                      style="margin-top: 2em; margin-bottom: 2em"
                       type="submit"
                     >
                       Subscribe
                     </button>
                   </div>
                 </form>
-		    <div
-		      id="payment-method-id-display"
-		      style="text-align: center; display: none; padding: 25px;"
-		    >
-		      <div style="margin-bottom: 1em; font-size: 1.25em;">
-			To complete the signup process please copy and paste the following token into the
-			`micro signup` flow
-		      </div>
-		      <div
-			id="payment-method-copypaste"
-			style="
-			  border-radius: 8px;
-			  padding: 1em;
-			  background: #f6f8fa;
-			  text-align: center;
-			  font-size: 1.5em;
-			  margin: 0 auto;
-			  max-width: 600px;
-			"
-		      >
-			example-token-jibcg2g22jd2d-2d2e3d
-		      </div>
-		    </div>
-		    <div
-		      id="payment-method-error"
-		      style="text-align: center; display: none; padding: 25px;"
-		    >
-		      <div
-			id="payment-method-error-text"
-			style="
-			  border-radius: 8px;
-			  padding: 1em;
-			  background: #ff9c7e;
-			  text-align: center;
-			  font-size: 1.5em;
-			  max-width: 600px;
-			  margin: 0 auto;
-			"
-		      ></div>
-		    </div>
+                <div
+                  id="payment-method-id-display"
+                  style="text-align: center; display: none; padding: 25px"
+                >
+                  <div style="margin-bottom: 1em; font-size: 1.25em">
+                    To complete the signup process please copy and paste the
+                    following token into the `micro signup` flow
+                  </div>
+                  <div
+                    id="payment-method-copypaste"
+                    style="
+                      border-radius: 8px;
+                      padding: 1em;
+                      background: #f6f8fa;
+                      text-align: center;
+                      font-size: 1.5em;
+                      margin: 0 auto;
+                      max-width: 600px;
+                    "
+                  >
+                    example-token-jibcg2g22jd2d-2d2e3d
+                  </div>
+                </div>
+                <div
+                  id="payment-method-error"
+                  style="text-align: center; display: none; padding: 25px"
+                >
+                  <div
+                    id="payment-method-error-text"
+                    style="
+                      border-radius: 8px;
+                      padding: 1em;
+                      background: #ff9c7e;
+                      text-align: center;
+                      font-size: 1.5em;
+                      max-width: 600px;
+                      margin: 0 auto;
+                    "
+                  ></div>
+                </div>
               </div>
             </div>
           </div>
@@ -248,8 +269,8 @@
     }) {
       // Set up payment method for recurring usage
       let billingEmail = document.querySelector("#email")
-      ? document.querySelector("#email").value
-      : "";
+        ? document.querySelector("#email").value
+        : "";
 
       stripe
         .createPaymentMethod({
@@ -260,7 +281,6 @@
           },
         })
         .then((result) => {
-          // result.error = "whaat"
           if (result.error) {
             console.log("Failure");
             $("#payment-method-error").show();
@@ -270,8 +290,31 @@
             $("#payment-method-error").hide();
             $("#payment-method-id-display").show();
             $("#subscription-form").hide();
-            $("#payment-method-copypaste").text(result.paymentMethod.id);
-
+            $("#payment-method-copypaste").text("Processing...");
+            const env = urlParams.get("env");
+            var uri = "";
+            if (env === "staging") {
+              uri = "https://api.m3o.dev/";
+            } else {
+              uri = "https://api.m3o.com/";
+            }
+            $.ajax({
+              url: uri + "signup/setPaymentMethod",
+              type: "get",
+              data: {
+                email: billingEmail,
+                paymentMethod: result.paymentMethod.id,
+              },
+              headers: {
+                "Namespace": "micro",
+              },
+            })
+              .done(function (data) {
+                $("#payment-method-copypaste").text("Success! Please return to your terminal.");
+              })
+              .fail(function (jqXHR, textStatus, errorThrown) {
+                $("#payment-method-error-text").text("Something has went wrong: " + json.stringify(errorThrown));
+              });
             return;
             if (isPaymentRetry) {
               // Update the payment method and retry invoice payment
@@ -706,13 +749,13 @@
     }
 
     const urlParams = new URLSearchParams(window.location.search);
-    const env = urlParams.get('env');
-    if (env === 'staging') {
+    const env = urlParams.get("env");
+    if (env === "staging") {
       stripeElements("pk_test_wuI8wlKwKBUZ9iHnYlQPa8BH");
     } else {
       stripeElements("pk_live_CPlU8hrgrZBGZIg1NZjdpx6p");
     }
-    
+
     //getConfig();
 
     /* ------ Sample helpers ------- */
@@ -917,16 +960,16 @@
     }
 
     function acceptParam() {
-      var hashParams = window.location.href.split('?'); 
-          hashParams = hashParams[1].split('&');
-          hashParams.forEach(function(s) {
-            var p = s.split('=');
-            let elem = p[0]
-            let val = p[1]
-            if (document.getElementById(elem) !=null) {
-              document.getElementById(elem).value = val
-            }
-          })
+      var hashParams = window.location.href.split("?");
+      hashParams = hashParams[1].split("&");
+      hashParams.forEach(function (s) {
+        var p = s.split("=");
+        let elem = p[0];
+        let val = p[1];
+        if (document.getElementById(elem) != null) {
+          document.getElementById(elem).value = val;
+        }
+      });
     }
   </script>
   {% include script.html %}
