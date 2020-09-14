@@ -1,7 +1,7 @@
 ---
 layout:	post
 author: Janos Dobronszki
-title:	"Announcing: M3O - A cloud native platform built for developers"
+title:	"M3O - A cloud native platform built for developers"
 date:	2020-07-30 10:00:00
 ---
 <br>
@@ -24,7 +24,7 @@ Or perhaps it's a form of decision paralysis due to the explosion of available t
 
 We are self aware enough to realise our thinking might run critically close to the [XKCD comic about standards](https://xkcd.com/927/). We are also idealistic, (or crazy/bold/ambitious, it's for the dear reader to decide), enough to believe, we as a tiny startup of misfits can provide a leaner approach to other startups to build services for the Cloud era.
 
-Being a small team, we hope to be the David against the Goliaths and provide a unifying, overarching vision for the whole workflow from local to cloud and all steps in between, while adamantly keeping the Holy Grail of developer happiness in mind.
+Being a small team, we hope to be the David against the Goliaths and provide a unifying, overarching vision for the whole workflow from local to cloud and all steps in between, while adamantly keeping the Holy Grail of developer productivity in mind.
 
 We did not always want to get into the platform business. In fact we desperately tried to avoid doing it at all costs, knowing how PaaS has played out before us. Unfortunately seeing what the status quo has become and having experienced a better world at companies like Google, Hailo and Monzo, we knew it was on us to do something about it.
 
@@ -32,7 +32,7 @@ There were some times over the past few years where we thought technologies like
 
 ## A Cloud native platform built for developers
 
-Micro started life as a Go framework for microservices development. To solve the problem of distributed systems development with a developer first focus. It took the approach of solving this problem in the smallest way possible. Now though, we find ourselves evolving and moving on to becoming both a [Runtime](https://m3o.com/blog/2020/05/04/introducing-micro-server.html) and a Platform.
+Micro started life as a Go framework for microservices development. To solve the problem of distributed systems development with a developer first focus. It took the approach of solving this problem in the smallest way possible. Now though, we find ourselves evolving and moving on to becoming both a [Runtime](https://en.wikipedia.org/wiki/Runtime_system) and a Platform.
 
 M3O is a platform for Micro services development. A fully managed cloud platform which eliminates the need for developers to touch infrastructure and lets them get back to focusing on product and service development. The best kept secret of every successful technology company is now being opened to the world to use as a simply priced hosted platform.
 

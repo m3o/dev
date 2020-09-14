@@ -7,7 +7,7 @@
     color: #0c2e47;
     }
     body {
-    margin-top: 25px;
+      padding-top: 50px;
     }
     h2 { color: #0c2e47; }
     a { color: #3B94D9; }
@@ -36,11 +36,11 @@
 	font-weight: bold;
     }
     .footer, .footer i, .footer a { color: #495057;}
-    .footer { border-top: 1px solid #eee; padding: 50px 0 50px 0; }
+    .footer { border-top: 1px solid #eee; padding: 50px 0 25px 0; }
     .footer ul { margin: 0; }
     .main {
-      min-height: calc(100% - 120px);
-      min-height: calc(100vh - 120px);
+      min-height: calc(100% - 400px);
+      min-height: calc(100vh - 400px);
       max-width: 1220px;
       margin: 0 auto;
       padding-top: 4%;
@@ -194,4 +194,17 @@
 }
 .pricing i {
   color: green;
+}
+
+.features td {
+  padding: .50rem;
+}
+.subscript {
+  font-size: 0.5em;
+  height: 100%;
+  vertical-align: middle;
+}
+
+#mc_embed_signup .button {
+  background-color: #495057;
 }
