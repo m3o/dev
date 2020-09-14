@@ -302,14 +302,18 @@
                 paymentMethod: result.paymentMethod.id,
               },
               headers: {
-                "Namespace": "micro",
+                Namespace: "micro",
               },
             })
               .done(function (data) {
-                $("#payment-method-copypaste").text("Success! Please return to your terminal.");
+                $("#payment-method-copypaste").text(
+                  "Success! Please return to your terminal."
+                );
               })
               .fail(function (jqXHR, textStatus, errorThrown) {
-                $("#payment-method-error-text").text("Something has went wrong: " + json.stringify(errorThrown));
+                $("#payment-method-error-text").text(
+                  "Something has went wrong: " + json.stringify(errorThrown)
+                );
               });
             return;
             if (isPaymentRetry) {
