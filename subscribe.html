@@ -289,7 +289,7 @@
             $("#payment-method-copypaste").text("Processing...");
             const env = urlParams.get("env");
             var uri = "";
-            if (env === "staging") {
+            if (env === "staging" || env === "dev") {
               uri = "https://api.m3o.dev/";
             } else {
               uri = "https://api.m3o.com/";
@@ -750,7 +750,7 @@
 
     const urlParams = new URLSearchParams(window.location.search);
     const env = urlParams.get("env");
-    if (env === "staging") {
+    if (env === "staging" || env === "dev") {
       stripeElements("pk_test_wuI8wlKwKBUZ9iHnYlQPa8BH");
     } else {
       stripeElements("pk_live_CPlU8hrgrZBGZIg1NZjdpx6p");
