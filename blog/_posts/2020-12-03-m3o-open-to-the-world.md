@@ -72,7 +72,7 @@ do such a good job of it we shouldn't have to. What we've however noticed is the
 Where Heroku took too much away, AWS is giving too much back. Especially to the developer. 
 
 Our primary goal is to abstract away the complexity of the cloud and provide a new development model that focuses on distributed and 
-multi-service development aka microservices. We think to do all that you really have to be focused on the developer experience for microservices 
+multi-service development ontop aka microservices. We think to do all that you really have to be focused on the developer experience for microservices 
 and that requires a number of primitives listed in the feature set above.
 
 Over time though we know some of those abstractions and the infrastructure components will require direct access and we want to promote 
