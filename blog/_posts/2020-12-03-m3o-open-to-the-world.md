@@ -39,9 +39,8 @@ Here's a few things to highlight:
 
 M3O is launching with a simple 3 tier pricing plan; **Dev**, **Platform** and **Cloud**. 
 
-- **Dev** is a free tier for you to get started on. We 
-know the hassles of getting stuff up and running and the costs of Cloud (even with credits) so we're making it super simple for developers 
-to get started fast.
+- **Dev** is a free tier for you to get started on. We know the hassles of getting stuff up and running and the costs of Cloud 
+(even with credits) so we're making it super simple for developers to get started fast. This is built for small projects and individual devs.
 
 - **Platform** is a paid secure, scalable and supported tier that includes 2x the resource limits of Dev and gives you confidence in a 
 platform team managing the infrastructure. When you're done hacking on Dev, switch to the Platform environment and run your 
