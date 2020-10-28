@@ -86,7 +86,7 @@ them with the need for infrastructure and operational management.
 
 We're excited to unveil M3O to the world and hopefully you're interested in trying it out too. Just head on over to the [website](https://m3o.com) 
 to get started or join us on [slack](https://slack.m3o.com) and [discord](https://discord.gg/hbmJEct). If you've felt the pains of managing 
-cloud infrastructure and want a simpler experience that just lets you focus on microservices development (primarily in Go) then we're the 
+cloud infrastructure and want a simpler experience that just lets you focus on microservices development then we're the 
 new cloud provider built just for you.
 
 Cheers
