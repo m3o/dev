@@ -29,8 +29,8 @@ Here's a few things to highlight:
 - **PubSub messaging** and event streaming
 - **Service discovery** and secure networking
 - **Key-value storage** and persistent CRUD
-- **Automatic HTTP routing** with pase based resolution
-- **Identity aware proxy** for remote acces and frontend apps
+- **Automatic HTTP routing** with path based resolution
+- **Identity aware proxy** for remote access and gRPC-web apps
 - **Public API gateway** and TLS support by default
 - **Public and private repos** support including  github, gitlab and bitbucket
 
