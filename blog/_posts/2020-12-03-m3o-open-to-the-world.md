@@ -67,7 +67,7 @@ can top up as you need.
 
 ### Goals
 
-Our goal is not to replace cloud compute or large scale infrastructure providers. This isn't something we can't really do and infact they 
+Our goal is not to replace cloud compute or large scale infrastructure providers. This isn't something we can really do and infact they 
 do such a good job of it we shouldn't have to. What we've however noticed is the developer experience is really lagging behind in 2020. 
 Where Heroku took too much away, AWS is giving too much back. Especially to the developer. 
 
