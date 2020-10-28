@@ -53,7 +53,7 @@ separate so you know you're the single tenant and owner of those resources.
 ### Pricing
 
 Unlike cloud compute providers who feel the need to charge per the penny and force to you into using pricing calculators to figure out the 
-costs, we're using a simply flat subscription pricing model on a per user basis. Our goal is to focus on abstracting away the dealings 
+costs, we're using a simply flat subscription pricing model on a per user basis. Our goal is to focus on abstracting away the details 
 of infrastructure including the pricing and let you as a developer just focus on writing code. 
 
 That's why the platform is priced at $35/user/month with unlimited collaborators. Over time we'll include addition value add services 
