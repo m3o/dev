@@ -6,8 +6,8 @@ date:	2020-12-03 10:00:00
 <br>
 Today we're unveiling M3O as "open to the world". Head to the [homepage](https://m3o.com) and get started immediately. 
 M3O is a fully managed cloud platform for microservices development. It's built based on the 
-popular open source project [**Micro**](https://m3o.org) and focuses on developer productivity for backend service development. To read about 
-the related Micro 3.0 release head to the [open source blog post](https://m3o.org/blog/2020-11-05-micro-v3-aka-m3o).
+popular open source project [**Micro**](https://micro.mu) and focuses on developer productivity for backend service development. To read about 
+the related Micro 3.0 release head to the [open source blog post](https://micro.mu/blog/2020-11-05-micro-v3-aka-m3o).
 
 Back in May we [announced](/blog/2020/07/30/m3o-a-cloud-native-platform-built-for-developers.html) our goals and efforts towards building a 
 shared platform in the cloud for developers to create services without the hassle of managing infrastructure. Since then we've been testing 
