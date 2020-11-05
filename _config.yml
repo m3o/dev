@@ -15,8 +15,9 @@ url:            'https://m3o.com/'
 author:         'Asim Aslam'
 author_url:     'https://github.com/asim'
 twitter_url:	'https://twitter.com/m3oservices'
-paginate_path: "/blog/page:num/"
+
 google_analytics: UA-70478210-4
+
 sidebars:
 - home_sidebar
 defaults:
