@@ -15,7 +15,7 @@
     a { color: #3B94D9; }
 
     button {
-      background-color: #85D4D8; /* Green */
+      background-color: blue; /* Green */
       border: none;
       color: whitesmoke;
       padding: 15px 32px;
@@ -26,10 +26,6 @@
       font-size: 16px;
       border-radius: 5px;
       font-weight: bold;
-    }
-
-    button:hover {
-      background-color: rgb(152, 230, 235);
     }
 
     .navbar-light .navbar-toggler { border: 0; }
